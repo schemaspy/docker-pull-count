@@ -5,11 +5,6 @@ from flask_cors import cross_origin
 app = Flask(__name__)
 
 
-@app.route('/')
-def hello():
-    return 'Hello World'
-
-
 @app.route('/pull-count', methods=['GET', ' OPTIONS'])
 @cross_origin()
 def get_docker_pull_count():
