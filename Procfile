@@ -1,0 +1,1 @@
+web: gunicorn docker-pull-count:app --log-file=-
