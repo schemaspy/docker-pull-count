@@ -1,13 +1,9 @@
-from flask import Flask
-
-app = Flask(__name__)
+import docker
 
 
-@app.route('/')
-def hello():
-    return 'Hello World'
+def start_server():
+    docker.app.run(debug=True)
 
 
-@app.route('/docker-pull-count')
-def get_docker_pull_count():
-    return 456789
+if __name__ == '__main__':
+    start_server()
